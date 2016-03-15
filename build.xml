@@ -1,0 +1,31 @@
+<project name="Salesforce Apex Documentation Demo" default="docs" xmlns:sf="antlib:com.salesforce" basedir=".">
+	
+	<!-- Use build.properties file to set ANT properties -->
+	<property file="build.properties"/>
+
+	<!--  Downloaded from Salesforce Tools page under Setup -->
+	<typedef 
+		uri="antlib:com.salesforce" 
+		resource="com/salesforce/antlib.xml" 
+		classpath="${basedir}/lib/ant-salesforce.jar"/>
+
+	<!-- Import macros to install/uninstall packages -->
+	<import file="${basedir}/lib/ant-salesforce.xml"/>
+	
+	<!-- Import deployment tools -->
+	<import file="${basedir}/lib/exec_anon.xml"/>
+	<import file="${basedir}/lib/deploy.xml"/>
+	<import file="${basedir}/lib/undeploy.xml"/>
+	<import file="${basedir}/lib/run_tests.xml"/>
+	<import file="${basedir}/lib/package_generator.xml"/>
+	
+	<!-- Generate Docs -->
+	<target name="docs">
+		<delete dir="${basedir}/Documentation" />
+        <mkdir dir="${basedir}/Documentation" />
+		<java fork="true" failonerror="true" jar="lib/SfApexDoc.jar">
+			<arg line="-s src/classes -t Documentation/ -a docAuthor.txt -h docHome.txt -p global,public,private,protected" />
+		</java>
+	</target>
+
+</project>

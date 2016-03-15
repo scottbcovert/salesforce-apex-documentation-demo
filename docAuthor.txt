@@ -1,0 +1,2 @@
+projectName = Salesforce Apex Documentation Demo
+author = Scott Covert <a href="mailto:scott.covert@tython.co?Subject=Salesforce%20Apex%20Documentation%20Demo"> (scott.covert@tython.co)</a>

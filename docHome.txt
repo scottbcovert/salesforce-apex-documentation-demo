@@ -1,0 +1,5 @@
+<h1>Salesforce Apex Documentation Demo</h1>
+<p>This project serves as a demonstration of the ApexDocs tool for automatically generating documentation for Salesforce applications.</p>
+<p>This documentation was created using ApexDocs (originally developed by Aslam Bari and later improved by Steve Cox) and has been included in the project to assist future developers and maintainers of the project.</p>
+<p>All source code can be found on <a href="http://bit.ly/1WmsEa3">GitHub</a>.</p>
+<p>Happy Coding!</p>

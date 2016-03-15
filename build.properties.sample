@@ -1,0 +1,12 @@
+# Sample build.properties file
+# Copy the contents of this file into a new build.properties file
+
+# Specify the login credentials for the deployment Salesforce organization
+sf.username={username}
+sf.password={password+token}
+
+# If you are using a sandbox change this to https://test.salesforce.com
+sf.server=https://login.salesforce.com
+
+# Update as needed to reflect newer versions of the Salesforce API
+sf.api=36.0
